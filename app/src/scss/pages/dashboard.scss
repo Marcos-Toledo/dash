@@ -1,17 +1,31 @@
 .m-wrap-box-social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .m-box-social {
-  width: 348px;
   text-align: center;
-  padding: 63px 0 0;
+  padding: 59px 0 47px;
+  flex: 0 1 348px;
+  border-bottom: 3px dotted #cbcccd;
 }
 
 .m-box-social-img {
   width: 90px;
-  display: block;
   margin: 0 auto;
+  position: relative;
+
+  img {
+    max-width: 100px;
+    display: block;
+  }
+
+  i {
+    position: absolute;
+    top: 8px;
+    right: -57px;
+    font-size: 2rem;
+  }
 }
 
 .m-box-social-label {

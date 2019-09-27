@@ -23,15 +23,15 @@ body {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  // background-color: #F7F7F7;
+  background-color: #F7F7F7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('../images/fbc-001.png') no-repeat 0 0;
+  // background: url('../images/fbc-001.png') no-repeat 0 0;
   background-size: cover;
 }
 
 main {
-  padding: 62px 0 0;
+  padding: 62px 0 60px;
 }
 
 .m-container {

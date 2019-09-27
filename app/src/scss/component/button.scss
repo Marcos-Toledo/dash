@@ -1,3 +1,18 @@
 .m-btn {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 49px;
   border: none;
+  border-radius: 5px;
+  height: 49px;
+  display:inline-block;
+  padding: 0 27px;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.m-btn-primary {
+  @extend .m-btn;
+  background-color: #E0524C;
 }

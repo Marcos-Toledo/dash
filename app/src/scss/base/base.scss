@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 html, body {
   height: 100vh;
 }
@@ -11,7 +19,17 @@ html, body {
 body {
   color: #999999;
   font-family: Arial, sans-serif;
-  background-color: #F7F7F7;
+  font-size: 1.4rem;
+  line-height: 1;
+  // background-color: #F7F7F7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('../images/fbc-001.png') no-repeat 0 0;
+  background-size: cover;
+}
+
+.m-container {
+  max-width: 1760px;
+  padding: 0 10px;
+  margin: 0 auto;
 }

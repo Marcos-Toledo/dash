@@ -28,14 +28,19 @@ const paths = {
     dest: './app/assets/images'
   },
   fonts: {
-    src: './app/src/fonts/**',
+    src: [
+      'node_modules/@fortawesome/fontawesome-free/webfonts/**',
+      './app/src/fonts/**'
+    ],
     dest: './app/assets/fonts'
   }
 }
 
 const style = () => {
   return src(paths.style.src)
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: ['node_modules/']
+    }).on('error', sass.logError))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 3 versions']
     }))

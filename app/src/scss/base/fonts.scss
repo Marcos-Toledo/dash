@@ -1,3 +1,9 @@
+$fa-font-path: '../fonts';
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+
 @font-face {
 	font-family: 'primeregular';
 	src: url('../fonts/prime_regular-webfont.eot');

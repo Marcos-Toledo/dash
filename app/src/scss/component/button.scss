@@ -1,5 +1,6 @@
 .m-btn {
   color: #fff;
+  font-family: 'primeregular';
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 49px;
@@ -12,7 +13,27 @@
   background-color: #ccc;
 }
 
+.m-btn-light {
+  @extend .m-btn;
+  color: #737373;
+  background-color: transparent
+}
+
 .m-btn-primary {
   @extend .m-btn;
+  background-color: #4A8FE2;
+}
+
+.m-btn-secondary {
+  @extend .m-btn;
   background-color: #E0524C;
+}
+
+.m-btn-large {
+  line-height: 74px;
+  height: 74px;
+}
+
+.m-btn-uppercase {
+  text-transform: uppercase;
 }

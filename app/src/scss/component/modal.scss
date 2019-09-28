@@ -5,24 +5,44 @@
   position: fixed;
   top: 0;
   left: 0;
-  // background-color: rgba(0, 0, 0, 0.7);
-  background: url('../images/fbc-002.png') no-repeat 0 0;
+  background-color: rgba(0, 0, 0, 0.7);
   background-size: cover;
+  transition: 200ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
   z-index: 5;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+
+    .m-modal-container {
+      top: 0;
+    }
+  }
 }
 
 .m-modal-container {
   min-width: 927px;
   color: #000;
   position: absolute;
-  top: 0;
+  top: -100%;
   left: 50%;
-  padding: 37px 37px 0;
+  padding: 37px 0 0;
   transform: translate(-50%, 0);
+  background-color: #fff;
+  transition: 200ms ease-in-out;
+}
+
+.m-did-not-find-your-page {
+  color: #808184;
+  font-size: 1.3rem;
+  padding-bottom: 25px;
 }
 
 .m-modal-topo {
   position: relative;
+  padding: 0 37px;
 }
 
 .m-modal-topo-ico {
@@ -47,16 +67,28 @@
   color: #7f868b;
   position: absolute;
   top: 2px;
-  right: 7px;
+  right: 45px;
 }
 
+.m-modal-body {
+  padding: 0 37px;
+}
+
+.m-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 37px;
+  margin-top: 97px;
+  background-color: #F8F8F8;
+}
+
+// >>>>>>> STEP
 .m-wrap-step {
   padding: 38px 73px 80px;
   display: flex;
   justify-content: space-between;
 }
 
-// >>>>>>> STEP
 .m-step {
   color: #d8d8d8;
   width: 20px;
@@ -103,12 +135,24 @@
 
 // >>>> lIST PAGES
 .m-list-pages {
+  max-height: 262px;
   padding: 0 23px;
-  margin: 18px 0 0;
+  margin: 18px 0 38px;
+  background-color: #efefef;
+  overflow-y: auto;
 
   li {
     padding: 17px 0 18px;
     min-height: 109px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+  }
+
+  .m-custom-input-radio {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    transform: translateY(-50%);
   }
 }
 

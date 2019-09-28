@@ -38,6 +38,8 @@ mLabs = (function() {
       
       socialNetwork.pages = data.filter(function(obj) { return obj.channel_key === socialName });
     });
+
+    localStorage.setItem('social_networks', JSON.stringify(socialNetworks));
   }
 
   return { init: init }

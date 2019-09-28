@@ -5,7 +5,7 @@ mLabs.modal = (function() {
   'use strict';
 
   function init() {
-    console.log('Modal >>>');
+    var data = JSON.parse(localStorage.getItem('social_networks')) || [];
   }
 
   return { init: init };

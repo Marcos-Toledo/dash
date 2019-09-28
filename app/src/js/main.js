@@ -11,7 +11,7 @@ mLabs = (function() {
   function startModule() {
     $.each(mLabs.modules, function(i, module) {
       mLabs[module].init();
-      $.event.trigger(module,':ready', [i, module]);
+      $.event.trigger(module+':ready', [i, module]);
     });
   }
 

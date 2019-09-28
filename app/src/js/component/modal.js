@@ -1,4 +1,4 @@
-mLabs.modules = mLabs.module || [];
+mLabs.modules = mLabs.modules || [];
 mLabs.modules.push('modal');
 
 mLabs.modal = (function() {
@@ -13,12 +13,13 @@ mLabs.modal = (function() {
   }
 
   function init() {
-    $(config.btnOpen).on('click', document, openModal);
-    $(config.btnClose).on('click', document, closeModal);
+    $(document).on('click', config.btnOpen, openModal);
+    $(config.btnClose).on('click', closeModal);
   }
   
   function openModal(el) {
     el.preventDefault();
+    console.log('aqui!!!');
     $(config.modal).addClass(config.isActive);
     
     var redeSocial = $(this).attr('data-social');

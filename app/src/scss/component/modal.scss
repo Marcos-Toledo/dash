@@ -1,0 +1,131 @@
+.m-modal {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // background-color: rgba(0, 0, 0, 0.7);
+  background: url('../images/fbc-002.png') no-repeat 0 0;
+  background-size: cover;
+  z-index: 5;
+}
+
+.m-modal-container {
+  min-width: 927px;
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 37px 37px 0;
+  transform: translate(-50%, 0);
+}
+
+.m-modal-topo {
+  position: relative;
+}
+
+.m-modal-topo-ico {
+  display: inline-block;
+  border: 2px solid #d8d8d8;
+  border-radius: 50%;
+  width: 61px;
+  height: 61px;
+  vertical-align: middle;
+}
+
+.m-modal-topo-title {
+  font-size: 2.3rem;
+  font-weight: 100;
+  vertical-align: middle;
+  display: inline-block;
+  padding-left: 14px;
+}
+
+.m-close-modal {
+  font-size: 2rem;
+  color: #7f868b;
+  position: absolute;
+  top: 2px;
+  right: 7px;
+}
+
+.m-wrap-step {
+  padding: 38px 73px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+// >>>>>>> STEP
+.m-step {
+  color: #d8d8d8;
+  width: 20px;
+  height: 20px;
+  font-size: 1.15rem;
+  border-radius: 50%;
+  position: relative;
+  background-color: #d8d8d8;
+
+  &.m-is-prev,
+  &.m-is-curret {
+    color: #000;
+    background-color: #ef9f2e;
+
+    &:after {
+      border-color: #ef9f2e;
+    }
+  }
+
+  &:first-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 50%;
+    bottom: -28px;
+    transform: translateX(-50%);
+  }
+
+  &:after {
+    content: '';
+    width: 999%;
+    border-bottom: 2px solid #d8d8d8;
+    position: absolute;
+    right: 112%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// >>>> lIST PAGES
+.m-list-pages {
+  padding: 0 23px;
+  margin: 18px 0 0;
+
+  li {
+    padding: 17px 0 18px;
+    min-height: 109px;
+  }
+}
+
+.m-list-pages-picture {
+  float: left;
+  width: 75px;
+  height: 74px;
+  margin-right: 22px;
+  border: 1px solid #9d9d9d;
+}
+
+.m-list-pages-name {
+  font-size: 1.6rem;
+  padding: 10px 0 7px;
+}
+
+.m-list-pages-url {
+  color: #969696;
+  font-size: 1.2rem;
+}

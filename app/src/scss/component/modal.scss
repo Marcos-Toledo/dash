@@ -162,6 +162,12 @@
   height: 74px;
   margin-right: 22px;
   border: 1px solid #9d9d9d;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    display: block;
+  }
 }
 
 .m-list-pages-name {

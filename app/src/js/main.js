@@ -36,13 +36,8 @@ mLabs = (function() {
       {socialName: 'google_analytics', label: 'Google analytics', href: 'assets/images/image_analytics.png', pages: []},
     ];
 
-    $.each(socialNetworks, function(i, socialNetwork) {
-      var socialName = socialNetwork.socialName;
-      
-      socialNetwork.pages = data.filter(function(obj) { return obj.channel_key === socialName });
-    });
-
     localStorage.setItem('social_networks', JSON.stringify(socialNetworks));
+    localStorage.setItem('social_pages', JSON.stringify(data));
   }
 
   return { init: init }

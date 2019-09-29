@@ -33,29 +33,28 @@ mLabs.modal = (function() {
   }
 
   function rederList(redeSocial) {
-    var data = JSON.parse(localStorage.getItem('social_networks')) || [];
+    var networks = JSON.parse(localStorage.getItem('social_networks')) || [];
+    var pages = JSON.parse(localStorage.getItem('social_pages')) || [];
     
-    var channel = data.filter(function(channel) {
-      return channel.socialName === redeSocial;
-    });
+    var socialNetwork = networks.filter(function(obj) { return obj.socialName === redeSocial });
+    var channels = pages.filter(function(obj) { return obj.channel_key === redeSocial });
 
-    detailModal(channel);
-
-    return createList(channel);
+    detailModal(socialNetwork);
+    createList(channels);
   }
 
-  function detailModal(channel) {
+  function detailModal(socialNetwork) {
     var logoImg = $('.m-modal-topo-ico img');
     var namePage = $('.m-name-page');
 
-    $(logoImg).attr('src', channel[0].href);
-    $(logoImg).attr('alt', channel[0].label);
+    $(logoImg).attr('src', socialNetwork[0].href);
+    $(logoImg).attr('alt', socialNetwork[0].label);
     
-    namePage.text(channel[0].label);
+    namePage.text(socialNetwork[0].label);
   }
 
   function createList(channel) {
-    channel[0].pages.forEach(function(el, index) {
+    channel.forEach(function(el, index) {
       var li = document.createElement('li');
       var div = document.createElement('div');
       var img = document.createElement('img');

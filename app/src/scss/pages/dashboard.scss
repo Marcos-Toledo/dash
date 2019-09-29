@@ -9,15 +9,15 @@
   width: 20%;
   border: 3px dotted #cbcccd;
 
-  @media screen and (max-width: 1467px) {
+  @media screen and (max-width: $desktop) {
     width: 25%;
   }
 
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: $tablet + 500px) {
     width: 33.3%;
   }
 
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: $phone) {
     width: 100%;
   }
 }
@@ -49,5 +49,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding: 25px 0 31px;
 }

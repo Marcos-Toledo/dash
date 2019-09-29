@@ -2,12 +2,14 @@
   width: 100%;
   height: 100%;
   font-size: 1.5rem;
+  padding: 0 10px;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
   background-size: cover;
   transition: 200ms ease-in-out;
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   z-index: 5;
@@ -23,7 +25,7 @@
 }
 
 .m-modal-container {
-  min-width: 927px;
+  width: 927px;
   color: #000;
   position: absolute;
   top: -100%;
@@ -33,8 +35,8 @@
   background-color: #fff;
   transition: 200ms ease-in-out;
 
-  @media screen and (max-width: 1000px) {
-    min-width: 95%;
+  @media screen and (max-width: $tablet + 300px) {
+    width: 95%;
   }
 }
 
@@ -47,6 +49,8 @@
 .m-modal-topo {
   position: relative;
   padding: 0 37px;
+  display: flex;
+  align-items: center;
 }
 
 .m-modal-topo-ico {
@@ -54,6 +58,7 @@
   border: 2px solid #d8d8d8;
   border-radius: 50%;
   width: 61px;
+  min-width: 61px;
   height: 61px;
   vertical-align: middle;
   overflow: hidden;
@@ -78,6 +83,11 @@
   position: absolute;
   top: 2px;
   right: 45px;
+
+  @media screen and (max-width: $phone) {
+    top: -25px;
+    right: 19px;
+  }
 }
 
 .m-modal-body {
@@ -90,6 +100,11 @@
   padding: 25px 37px;
   margin-top: 97px;
   background-color: #F8F8F8;
+
+  @media screen and (max-width: $phone) {
+    padding: 15px 10px;
+    margin-top: 40px;
+  }
 }
 
 // >>>>>>> STEP
@@ -97,6 +112,10 @@
   padding: 38px 0 80px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: $phone) {
+    padding: 28px 0 40px;
+  }
 }
 
 .m-step {
@@ -108,7 +127,11 @@
   .m-step-label {
     text-align: center;
     display: block;
-    padding-top: 20px; 
+    padding-top: 20px;
+
+    @media screen and (max-width: $phone) {
+      padding-top: 10px;
+    }
   }
 
   &.m-is-active,
@@ -168,6 +191,10 @@
     min-height: 109px;
     border-bottom: 1px solid #fff;
     position: relative;
+
+    @media screen and (max-width: $phone) {
+      padding: 17px 60px 18px 0;
+    }
   }
 
   .m-custom-input-radio {
@@ -192,6 +219,12 @@
     width: 100%;
     display: block;
   }
+
+  @media screen and (max-width: $phone) {
+    position: static;
+    top: 0;
+    transform: translateY(0);
+  }
 }
 
 .m-list-pages-name {
@@ -202,4 +235,11 @@
 .m-list-pages-url {
   color: #969696;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: $phone) {
+  .m-modal-topo,
+  .m-modal-body {
+    padding: 0 10px;
+  }
 }

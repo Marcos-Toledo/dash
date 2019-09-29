@@ -164,7 +164,7 @@
   overflow-y: auto;
 
   li {
-    padding: 17px 0 18px;
+    padding: 17px 60px 18px 96px;
     min-height: 109px;
     border-bottom: 1px solid #fff;
     position: relative;
@@ -179,12 +179,14 @@
 }
 
 .m-list-pages-picture {
-  float: left;
   width: 75px;
   height: 74px;
-  margin-right: 22px;
   border: 1px solid #9d9d9d;
   overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 
   img {
     width: 100%;

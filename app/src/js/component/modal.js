@@ -39,7 +39,19 @@ mLabs.modal = (function() {
       return channel.socialName === redeSocial;
     });
 
+    detailModal(channel);
+
     return createList(channel);
+  }
+
+  function detailModal(channel) {
+    var logoImg = $('.m-modal-topo-ico img');
+    var namePage = $('.m-name-page');
+
+    $(logoImg).attr('src', channel[0].href);
+    $(logoImg).attr('alt', channel[0].label);
+    
+    namePage.text(channel[0].label);
   }
 
   function createList(channel) {

@@ -56,6 +56,12 @@
   width: 61px;
   height: 61px;
   vertical-align: middle;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    display: block;
+  }
 }
 
 .m-modal-topo-title {

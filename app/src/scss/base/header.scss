@@ -50,6 +50,7 @@
 
 .m-header-sub {
 	display: flex;
+	position: relative;
 }
 
 .m-btn-menu {
@@ -58,9 +59,13 @@
 	align-self: center;
 	font-size: 1.8rem;
 	margin: 0 36px 0 4px;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
 
 	@media screen and (max-width: 1467px) {
-		display: inline-block;
+		display: block;
 	}
 }
 
@@ -86,6 +91,10 @@
 
 	@media screen and (max-width: 1621px) {
 		width: 170px;
+	}
+
+	@media screen and (max-width: 1467px) {
+		margin: 0 auto;
 	}
 	
 	a {

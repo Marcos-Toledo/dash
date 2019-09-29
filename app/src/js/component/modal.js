@@ -19,7 +19,6 @@ mLabs.modal = (function() {
   
   function openModal(el) {
     el.preventDefault();
-    console.log('aqui!!!');
     $(config.modal).addClass(config.isActive);
     
     var redeSocial = $(this).attr('data-social');
@@ -68,6 +67,7 @@ mLabs.modal = (function() {
       $(input).attr('name', 'social_pages');
       $(input).attr('id', 'social-page-' + index);
       $(input).attr('class', 'm-input-radio');
+      $(input).attr('data-name', el.name);
 
       $(label).attr('for', 'social-page-' + index);
       $(label).attr('class', 'm-custom-input-radio');
@@ -79,7 +79,6 @@ mLabs.modal = (function() {
       $(li).append(a);
       $(li).append(input);
       $(li).append(label);
-
     })
   }
 

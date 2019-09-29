@@ -5,18 +5,7 @@ mLabs.socialBox = (function() {
   'use strict';
 
   var config = {
-    wrapBox: '.m-wrap-box-social',
-    boxes: [
-      {label: 'Facebook', href: 'assets/images/image_facebook.png', dataModal: 'facebook'},
-      {label: 'Twitter', href: 'assets/images/image_facebook.png', dataModal: 'twitter'},
-      {label: 'Instagram', href: 'assets/images/image_facebook.png', dataModal: 'instagram'},
-      {label: 'Google Meu Negócio', href: 'assets/images/image_facebook.png', dataModal: 'google'},
-      {label: 'Pinterest', href: 'assets/images/image_facebook.png', dataModal: 'pinterest'},
-      {label: 'Linkedin', href: 'assets/images/image_facebook.png', dataModal: 'linkedin'},
-      {label: 'Youtube', href: 'assets/images/image_facebook.png', dataModal: 'youtube'},
-      {label: 'Whatsapp', href: 'assets/images/image_facebook.png', dataModal: 'whatsapp'},
-      {label: 'Google Analytics', href: 'assets/images/image_facebook.png', dataModal: 'google_analytics'}
-    ]
+    wrapBox: '.m-wrap-box-social'
   }
 
   function init() {
@@ -24,7 +13,9 @@ mLabs.socialBox = (function() {
   }
 
   function createBox() {
-    config.boxes.forEach(function(box, index) {
+    var boxes = JSON.parse(localStorage.getItem('social_networks')) || [];
+
+    boxes.forEach(function(box, index) {
       var div = document.createElement('div');
       var divBoxImg = document.createElement('div');
       var img = document.createElement('img');
@@ -41,7 +32,7 @@ mLabs.socialBox = (function() {
       $(span).text(box.label);
       $(a).attr('href', '#');
       $(a).attr('class', 'm-btn-secondary m-open-modal');
-      $(a).attr('data-social', box.dataModal);
+      $(a).attr('data-social', box.socialName);
       $(a).text('Adicionar');
 
       $(config.wrapBox).append(div);

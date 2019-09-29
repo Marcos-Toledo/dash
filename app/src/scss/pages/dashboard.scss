@@ -7,8 +7,19 @@
   text-align: center;
   padding: 59px 0 47px;
   width: 20%;
-  border-top: 3px dotted #cbcccd;
-  border-left: 3px dotted #cbcccd;
+  border: 3px dotted #cbcccd;
+
+  @media screen and (max-width: 1467px) {
+    width: 25%;
+  }
+
+  @media screen and (max-width: 1030px) {
+    width: 33.3%;
+  }
+
+  @media screen and (max-width: 810px) {
+    width: 50%;
+  }
 }
 
 .m-box-social-img {
@@ -34,6 +45,9 @@
   font-family: 'primeregular';
   font-size: 1.9rem;
   text-transform: uppercase;
-  display: block;
-  padding: 25px 0 31px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 25px 0 31px;
 }

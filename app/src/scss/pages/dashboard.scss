@@ -20,6 +20,65 @@
   @media screen and (max-width: $phone) {
     width: 100%;
   }
+
+  &.m-box-social-page {
+    color: #fff;
+    text-align: left;
+    padding: 0 0 47px;
+
+    h2 {
+      padding: 15px 10px;
+    }
+
+    .m-box-social-img {
+      margin: 10px 0 0;
+    }
+  }
+
+  &.facebook {
+    background-color: #4e71a8;
+    
+    h2 {
+      background-color: #355089;
+    }
+  }
+
+  &.twitter {
+    background-color: #55ADED;
+
+    h2 {
+      background-color: #269aef;
+    }
+  }
+
+  &.instagram {
+    background: #f09433; 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  }
+
+  &.pinterest {
+    background-color: #E94F1F;
+
+    h2 {
+      background-color: #c1421b;
+    }
+  }
+
+  &.youtube {
+    background-color: #D04626;
+
+    h2 {
+      background-color: #c1421b;
+    }
+  }
+
+  &.google_analytics {
+    background-color: #F37E23;
+
+    h2 {
+      background-color: #ef5812;
+    }
+  }
 }
 
 .m-box-social-img {

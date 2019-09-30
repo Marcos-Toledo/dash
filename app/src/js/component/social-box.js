@@ -18,19 +18,29 @@ mLabs.socialBox = (function() {
     for (var i = 0; i < boxes.length; i++) {
 
       if ($(boxes[i].pages).length) {
-        createPages(boxes[i].pages);
+        createPages(boxes[i], boxes[i].pages);
       } else {
         createSocial(boxes[i]);
       }
     }
-
   }
 
-  function createPages(box) {
+  function createPages(box, page) {
+    var div = document.createElement('div');
     var h2 = document.createElement('h2');
-    $(h2).text(box[0].name);
+    var divBoxImg = document.createElement('div');
+    var img = document.createElement('img');
 
-    $(config.wrapBox).append(h2);
+    $(div).attr('class', 'm-box-social m-box-social-page ' + page[0].channel_key);
+    $(h2).text(page[0].name);
+    $(divBoxImg).attr('class', 'm-box-social-img');
+    $(img).attr('src', box.href);
+    $(img).attr('alt', box.label);
+    
+    $(config.wrapBox).append(div);
+    $(div).append(h2)
+    $(div).append(divBoxImg);
+    $(divBoxImg).append(img);
   }
   
   function createSocial(box) {

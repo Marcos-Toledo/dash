@@ -124,6 +124,10 @@ mLabs.modal = (function() {
         $(this).closest(config.modal).removeClass(config.isActive);
       }
     }
+
+    setTimeout(function() {
+      document.location.reload(true);
+    }, 300);
   }
 
   return { init: init };

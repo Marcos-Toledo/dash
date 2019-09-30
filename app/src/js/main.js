@@ -36,6 +36,8 @@ mLabs = (function() {
       {socialName: 'google_analytics', label: 'Google analytics', href: 'assets/images/image_analytics.png', pages: []},
     ];
 
+    if (localStorage.length) return true;
+
     localStorage.setItem('social_networks', JSON.stringify(socialNetworks));
     localStorage.setItem('social_pages', JSON.stringify(data));
   }

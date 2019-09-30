@@ -11,22 +11,35 @@
   padding: 0 27px;
   cursor: pointer;
   background-color: #ccc;
+  transition: 200ms ease-in-out;
 }
 
 .m-btn-light {
   @extend .m-btn;
   color: #737373;
-  background-color: transparent
+  background-color: transparent;
+
+  &:hover {
+    background-color: #e6e6e6;
+  }
 }
 
 .m-btn-primary {
   @extend .m-btn;
   background-color: #4A8FE2;
+
+  &:hover {
+    background-color: #66a4ef;
+  }
 }
 
 .m-btn-secondary {
   @extend .m-btn;
   background-color: #E0524C;
+
+  &:hover {
+    background-color: #e68783;
+  }
 }
 
 .m-btn-large {

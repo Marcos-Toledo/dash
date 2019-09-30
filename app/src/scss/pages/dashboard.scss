@@ -7,18 +7,57 @@
   text-align: center;
   padding: 59px 0 47px;
   width: 20%;
-  border: 3px dotted #cbcccd;
+  border-right: 3px dotted #cbcccd;
+  border-bottom: 3px dotted #cbcccd;
 
-  @media screen and (max-width: $desktop) {
-    width: 25%;
+  &:nth-of-type(-1n+5) {
+    border-top: 3px dotted #cbcccd;
+  }
+
+  &:first-child {
+    border-left: 3px dotted #cbcccd;
+  }
+
+  &:nth-of-type(6n+6) {
+    border-left: 3px dotted #cbcccd;
   }
 
   @media screen and (max-width: $tablet + 500px) {
     width: 33.3%;
+
+    &:nth-of-type(-1n+5) {
+      border-top: none;
+    }
+
+    &:nth-of-type(3n+1) {
+      border-left: 3px dotted #cbcccd;
+    }
+
+    &:nth-of-type(-1n+3) {
+      border-top: 3px dotted #cbcccd;
+    }
+  
+    &:nth-of-type(6n+6) {
+      border-left: none;
+    }
   }
 
   @media screen and (max-width: $phone) {
     width: 100%;
+    border-left: 3px dotted #cbcccd;
+    
+    &:first-child {
+      border-top: 3px dotted #cbcccd;
+    }
+
+    &:nth-of-type(1n+2) {
+      border-top: none;
+    }
+
+    &:nth-of-type(6n+6) {
+      border-left: 3px dotted #cbcccd;
+    }
+
   }
 
   &.m-box-social-page {

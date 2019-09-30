@@ -21,9 +21,7 @@ html, body {
   @media screen and (min-width: $phone) {
     font-size: 80%;
   }
-  @media screen and (min-width: $tablet) {
-    font-size: 90%;
-  }
+
   @media screen and (min-width: $desktop) {
     font-size: 90%;
   }
@@ -38,7 +36,6 @@ body {
   background-color: #F7F7F7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background: url('../images/fbc-001.png') no-repeat 0 0;
   background-size: cover;
 }
 

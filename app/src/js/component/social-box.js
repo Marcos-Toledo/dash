@@ -9,7 +9,9 @@ mLabs.socialBox = (function() {
   }
 
   function init() {
-    createBox();
+    setTimeout(function() {
+      createBox();
+    }, 600);
   }
 
   function createBox() {

@@ -1,4 +1,5 @@
 var mLabs = mLabs || {};
+mLabs.module || [];
 
 mLabs = (function() {
   'use strict';
